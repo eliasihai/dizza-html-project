@@ -185,6 +185,7 @@ html {
 .links_container{
   display: flex;
   justify-content: center;
+  margin: 1rem 1.2rem;
 }
 .links_container .api_link a{
   text-decoration: none;

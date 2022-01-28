@@ -17,6 +17,7 @@ html {
 .container {
   padding: 0.4em 10em;
   margin: 2em 5em;
+  /* background-color: rgb(2, 122, 8); */
   border-radius: 30px;
 }
 .container .header_container {
@@ -142,6 +143,7 @@ html {
 .list_container ul li{
   position: relative;
   display: inline-block;
+  /* padding: 0.6em 0em !important; */
 }
 
 .list_container ul #li1 {

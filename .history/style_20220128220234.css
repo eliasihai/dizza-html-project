@@ -17,6 +17,7 @@ html {
 .container {
   padding: 0.4em 10em;
   margin: 2em 5em;
+
   border-radius: 30px;
 }
 .container .header_container {

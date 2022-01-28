@@ -3,20 +3,25 @@ body {
   min-inline-size: 100%;
   margin: 0;
   box-sizing: border-box;
+  display: grid;
   place-content: center;
   font-family: system-ui, sans-serif;
 }
 html {
+  /* block-size: 100%; */
+  /* inline-size: 100%; */
   margin: 0;
   font-family: "Source Serif 4", sans-serif;
-  background-image: url('./bg.png');
+  /* background-color: rgb(2, 122, 8); */
+  background-image: url('./Hnet.com-image.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
-  color: rgb(230, 230, 230);
+  /* background-size: cover; */
+  color: rgb(184, 184, 184);
 }
 .container {
   padding: 0.4em 10em;
   margin: 2em 5em;
+  /* background-color: rgb(2, 122, 8); */
   border-radius: 30px;
 }
 .container .header_container {
@@ -142,13 +147,14 @@ html {
 .list_container ul li{
   position: relative;
   display: inline-block;
+  /* padding: 0.6em 0em !important; */
 }
 
 .list_container ul #li1 {
   color:darkblue;
 }
 .list_container ul #li2 {
-  color:rgb(22, 128, 18);
+  color:rgb(19, 252, 11);
 }
 .list_container ul #li3 {
   color:rgb(170, 3, 3);

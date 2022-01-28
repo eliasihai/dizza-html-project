@@ -1,0 +1,219 @@
+body {
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  font-family: system-ui, sans-serif;
+}
+html {
+  block-size: 100%;
+  inline-size: 100%;
+  margin: 0;
+  font-family: "Source Serif 4", sans-serif;
+  background-color: rgb(2, 122, 8);
+  color: rgb(184, 184, 184);
+}
+.container {
+  padding: 0.4em 10em;
+  margin: 2em 5em;
+  /* background-color: rgb(2, 122, 8); */
+  border-radius: 30px;
+}
+.container .header_container {
+  display: flex;
+  flex-direction: column;
+}
+.container .title_style {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container h1 {
+  font-family: "Montserrat Medium";
+  /* max-width: 40ch; */
+  color: #fff;
+  text-align: center;
+  transform: scale(0.94);
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+}
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+.container span {
+  display: inline-block;
+  opacity: 0;
+  filter: blur(4px);
+}
+
+.container span:nth-child(1) {
+  animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.container span:nth-child(2) {
+  animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.container span:nth-child(3) {
+  animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+
+.container span:nth-child(4) {
+  animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+}
+@keyframes fade-in {
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+.container .title_style h2 {
+  padding: 0 3em;
+}
+.container .image_container{
+  display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.container .image_container:hover {
+	cursor: pointer;
+}
+
+.container .image_container img {
+	filter: grayscale();
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+	border: 6px solid whitesmoke;
+	box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.5);
+	margin-bottom: 1rem;
+	transition: filter 0.4s ease-in-out;
+}
+
+.container .image_container:hover img {
+	filter: none;
+}
+
+.describe_container .about_request,
+.describe_container .describe_text{
+  margin: 1.5rem 2rem;
+  font-size: 1.25em;
+}
+
+.describe_container h3 {
+  margin: 0.3rem 2rem !important;
+  text-align: center;
+  transition: background-position 275ms ease;
+}
+
+.describe_container h3 {
+  position: relative;
+  display: inline-block;
+  font-weight: 700;
+  overflow: hidden;
+  background: linear-gradient(to right, midnightblue, midnightblue 50%, rgb(202, 202, 202) 50%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200% 100%;
+  background-position: 100%;
+  transition: background-position 1s ease;
+  text-decoration: none; 
+}
+.describe_container h3:hover {
+  color: aquamarine;
+  background-position: 0 100%;
+}
+
+.list_container {
+  font-weight: 600;
+  margin: 0.1rem 2rem !important;
+}
+.list_container p{
+  -webkit-transition: color 1s;
+    transition: color 1s;
+}
+
+.list_container p:hover{
+  color: rgb(139, 0, 0);
+}
+
+.list_container ul{
+  padding-left: 1.2em !important;
+}
+.list_container ul li{
+  position: relative;
+  display: inline-block;
+  /* padding: 0.6em 0em !important; */
+}
+
+.list_container ul #li1 {
+  color:darkblue;
+}
+.list_container ul #li2 {
+  color:rgb(5, 139, 0);
+}
+.list_container ul #li3 {
+  color:rgb(170, 3, 3);
+}
+.data_container{
+  margin: 1em 0em;
+}
+.data_container .request_p{
+  margin: 1em 0em;
+}
+.data_container .response_p{
+  margin: 0.3em 0em;
+}
+.list_container li::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.list_container li:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.list_container li::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: rgba(235, 235, 235, 0.616);
+  z-index: -1;
+  transition: transform .5s ease;
+}
+.links_container{
+  display: flex;
+  justify-content: center;
+}
+.links_container .api_link a{
+  text-decoration: none;
+  margin: 1.5rem 2rem;
+}
+
+.links_container .web_link{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.links_container .web_link a{
+  text-decoration: none;
+  color:#fff;
+  background-color: unset;
+  border: unset;
+  font-size: 1rem;
+  text-align: end;
+}
+.links_container .web_link svg{
+  height: 10%;
+  align-items: center;
+  text-align: center;
+}
